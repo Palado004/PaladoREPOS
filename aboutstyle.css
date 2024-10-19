@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: 'Consolas', sans-serif;
+    background-color: #181818;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;
+    min-height: 100vh;
+    position: relative; 
+    overflow-x: hidden; 
+}
+
+/* LED Strip Effect for Body Background */
+body.led-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #5BCEFA, #F5A9B8, #FFFFFF, #D60270, #9B4F96, #0038A8, #5BCEFA);
+    background-size: 200% 100%;
+    animation: ledStripEffect 10s linear infinite;
+    z-index: -1; 
+}
+
+/* LED Strip Animation */
+@keyframes ledStripEffect {
+    0% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/* Toggle Button Styles */
+.toggle-button {
+    background-color: #FFFFFF;
+    color: #242424;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #3aa6d9;
+    transform: scale(1.05);
+}
+
+/* Background Image */
+.background-image {
+    width: 1000px;
+    height: 300px;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/767/233/135/space-planet-asteroid-spaceship-wallpaper-preview.jpg'); /* Replace with the actual image URL */
+    background-size: cover;
+    margin-top: 7px;
+    border-radius: 30px 30px 0 0;
+    position: static;
+}
+
+/* Profile Avatar */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-top: -40px;
+    background-color: white;
+}
+
+/* Text Container */
+.text-container {
+    background-color: #242424;
+    padding: 20px; 
+    border-radius: 0 0 30px 30px;
+    text-align: left; 
+    margin-bottom: 7px;
+}
+
+/* Profile Info */
+.profile-info {
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.profile-info h2 {
+    margin: 5px 0;
+    font-size: 24px;
+}
+
+.profile-info p {
+    font-size: 18px;
+    color: #b0b0b0;
+    margin: 5px 0;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    margin-top: 14px;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ff3f3fec;
+}
+
+/* Bio Section */
+.bio {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #cccccc;
+    text-align: left;
+}
+.bio a {
+    color: #cccccc;    
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.link-icon{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-top: 0px;
+    margin-bottom: -4.7px;
+}
+
+.bio a:hover{
+    color: #fbff16;
+}
+
